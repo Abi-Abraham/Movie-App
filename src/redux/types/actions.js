@@ -1,0 +1,4 @@
+export const LIST = {
+  GET_MOVIE_LIST: "GET_MOVIE_LIST",
+  UPDATE_FIELD: "UPDATE_FIELD",
+};
