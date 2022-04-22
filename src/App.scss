@@ -1,0 +1,116 @@
+$main-bg: rgb(0, 0, 0);
+$text-color: #fff;
+$small: 400px;
+$medium: 900px;
+
+.App {
+  background: $main-bg;
+  color: $text-color;
+  min-height: 100vh;
+}
+
+.my-nav {
+  background-image: url("./assets/images/nav_bar.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 192px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem;
+  @media (max-width: $small) {
+    padding: 1.5rem;
+    top: -45px;
+  }
+  @media (min-width: $small) and (max-width: $medium) {
+    padding: 1.5rem;
+    top: -25px;
+  }
+  .back-icon {
+    display: flex;
+    align-items: center;
+    img {
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      @media (max-width: $small) {
+        width: 20px;
+        height: 20px;
+      }
+      @media (min-width: $small) and (max-width: $medium) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    h3 {
+      margin-left: 20px;
+      font-weight: 400;
+      @media (max-width: $small) {
+        margin-left: 14px;
+      }
+      @media (min-width: $small) and (max-width: $medium) {
+        margin-left: 17px;
+      }
+    }
+  }
+  .search-icon {
+    img {
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      @media (max-width: $small) {
+        width: 20px;
+        height: 20px;
+      }
+      @media (min-width: $small) and (max-width: $medium) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  padding: 10px;
+  .movie-card {
+    padding: 20px;
+    margin: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    @media (max-width: $small) {
+      padding: 0;
+      margin: 5px;
+    }
+    @media (min-width: $small) and (max-width: $medium) {
+      padding: 0;
+      margin: 10px;
+    }
+    img {
+      width: 100%;
+      margin-bottom: 20px;
+      @media (max-width: $small) {
+        margin-bottom: 10px;
+      }
+      @media (min-width: $small) and (max-width: $medium) {
+        margin-bottom: 15px;
+      }
+    }
+    h6 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      @media (max-width: $small) {
+        font-size: 18px;
+      }
+      @media (min-width: $small) and (max-width: $medium) {
+        font-size: 20px;
+      }
+    }
+  }
+}
